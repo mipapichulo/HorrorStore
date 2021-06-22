@@ -1,0 +1,426 @@
+/* VARIABLES */
+:root {
+	--color-primary: #38799F;
+	--color-secondary:  #15557B;
+}
+
+/*************************************************************************************************************************************
+			HOME STYLE AND OTHER GENERAL STYLES
+*************************************************************************************************************************************/
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: var(--color-primary);
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: repeat(12, auto);
+}
+
+.brand-img {
+	width: 150px;
+	height: 130px;
+}
+
+.title-page {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.title {
+	font-size: 1.8em;
+}
+
+.title--center {
+	text-align: center;
+}
+
+/* NAV STYLE */ 
+
+.nav {
+	background-color: var(--color-secondary);
+	font-size: 1.2em;
+	grid-column: 1/13;
+}
+
+.nav__list {
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	list-style: none;
+	margin: 0;
+	padding: .8em;
+}
+
+.nav__item {
+	text-align: center;
+}
+
+.nav__link {
+	text-decoration: none;
+	color: #fff;
+	transition: ease .3s;
+	padding: .8em 5em;
+}
+
+.nav__link--active {
+	background-color: #333;
+	font-weight: bold;
+}
+
+.nav__link:hover {
+	background-color: #333;
+	font-weight: bold;
+}
+
+
+/* SHOWCASE - AD */ 
+
+.showcase {
+	display: flex;	
+	justify-content: flex-end;	
+	padding: 5em 3em; 
+	background-size: cover;
+	background-image: url('../pictures/showcase.png');
+	opacity: 0.9;
+}
+
+.showcase__content {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+}
+
+.showcase__text {
+	font-weight: bold;
+}
+
+/* FOOTER STYLE 
+* -Links about
+  -Copyright
+*/ 
+
+.footer {
+	background-color: var(--color-secondary);
+	padding: 1em 1.5em;
+}
+
+
+.footer__content {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__links {
+	display: flex;
+	gap: 5em;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	gap: .5em;
+}
+
+.links__link {
+	text-decoration: none;
+	color: #fff;
+}
+
+.links__link:hover {
+	text-decoration: underline;
+}
+
+.links--social {
+	display: block;
+}
+
+.links__title {
+	margin-top: 0;
+}
+
+.phrase {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.copyright {
+	text-align: center;
+	margin-top: 5em;     
+	border-top: 1px solid #333;     
+	padding-top: .5em;
+}
+
+.copyright__text {
+	margin: 0;
+}
+
+/* CONTAINER */ 
+
+.content {
+	width: 85%;
+	margin: auto;
+	padding: 1em;
+}
+
+.content--700px {
+	max-width: 700px;
+	margin: auto;
+	text-align: justify;
+	margin-bottom: 1em;
+
+}
+
+/* SECTION STYLE */
+
+
+.section__games {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2em;
+	justify-items: center;
+	padding-bottom: 1.5em;
+}
+
+.top-games {
+	background-color: var(--color-secondary);
+}
+
+.weekly-deals {
+	background-color: var(--color-primary);
+}
+
+/* GAME CARD STYLE */ 
+
+.game {
+	border: 1px solid #fff;
+	width: 230px;
+	display: flex;
+	flex-direction: column;
+	align-self: end;
+	box-shadow: 1px 1px 12px #fff;
+	transition: .3s ease;
+}
+
+.game:hover {
+	width: 240px;
+}
+
+.game:hover .game__img {
+	width: 240px;
+}
+
+.game__img {
+	width: 230px;
+	height: 320px;
+	transition: .3s ease;
+}
+
+.game__info {
+	padding: 0 .5em .5em .5em;
+}
+
+.game__price{
+	font-weight: bold;
+}
+
+.game__price--reduced {
+	font-size: .8em;
+	text-decoration: line-through;
+}
+
+/* BTN STYLE */ 
+
+.btn {
+	width: 100%;
+	color: #fff;
+	padding: .3em 0;	
+	font-size: 1.2em;
+	border: none;
+	font-weight: bold;
+	background-color: #aa9320;
+	cursor: pointer;
+	transition: ease .3s;
+}
+
+.btn:hover {
+	background-color: #d0b326;
+}
+
+
+.btn--lottery {
+	background-color: #ff3a3a;
+	text-align: center;
+	text-decoration: none;
+}
+
+.btn--lottery:hover {
+	background-color: #cc3131;
+}
+
+/* SVG IMAGES STYLE */ 
+
+.svg {
+	width: 30px;
+}
+
+.svg--search {
+	width: 25px;
+}
+
+/************************************************************************************
+ * 									STYLE INFO GAME
+************************************************************************************/
+
+.game-info__content{
+	display: flex;
+	justify-content: space-between;	
+	margin-bottom: 1em;
+}
+
+.game-info__img {
+	width: 700px;
+}
+
+.game-info__info {
+	font-size: 1.2em;
+	margin-left: 1em;
+}
+
+.game-info__synopsis{
+	max-width: 640px;
+}
+
+.game-info__purchase {
+	display: flex;
+	max-width: 500px;
+	margin: auto;
+}
+
+.btn--40porcent {
+	width: 40%;
+}
+
+.game-info__price {
+	flex-grow: 2;
+	text-align: center;
+	align-self: center;
+	font-weight: bold;
+	font-size: 1.5em;
+	background-color: #8c8c8c;
+	padding: .2em 0em;
+}
+
+
+.game-info__requirements{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0 2em;
+}
+
+.game-info__subtitle {
+	grid-column: 1/3;
+	margin-bottom: 0;
+}
+
+.game-info__text {
+	font-size: .9em;
+}
+
+.pay-method{
+	width: 400px;
+	margin-left: 10em;
+}
+
+/*********************************************************************************************************************
+ * 			CONTACT PAGE STYLE
+*********************************************************************************************************************/
+
+.form {
+	display: flex;
+	flex-flow: column nowrap;
+	border-radius: 15px;
+	padding: 1.5em;
+	background-color: var(--color-secondary);
+	max-width: 650px;
+	margin: auto;
+	margin-bottom: 2em;
+}
+
+.form__group {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 5px;
+	margin-bottom: 1em;
+}
+
+.form__label {
+	font-weight: bold;
+}
+
+
+.input {
+	width: auto;
+	padding: .3em;
+	font-size: 1em;
+}
+
+.btn--form {
+	width: auto;
+	padding: .5em 1.5em;
+	border-radius: 10px;
+	background-color: #378a8e;
+	align-self: end;
+}
+
+.btn--form:hover {
+	background-color: #46abb0;
+}
+
+/*********************************************************************************************************************
+ * 			ABOUT	PAGE STYLE
+*********************************************************************************************************************/
+
+.logo-content {
+	text-align: center;
+}
+
+.page-title {
+	font-size: 2em;
+}
+
+.about-img {
+	width: 350px;
+}
+
+.about__contact {
+	text-align: center;
+	font-size: 1.2em;
+}
+
+.about__link {
+	color: #fff;	
+}
+
+/*********************************************************************************************************************
+ * 			LOTTERY PAGE STYLE
+*********************************************************************************************************************/
+
+.flex {
+	display: flex;	
+	flex-direction: column;
+}
+
+.game--only {
+	align-self: center;
+	margin-bottom: 2em;
+}
+
+.form__title {
+	margin-top: 0;
+}
